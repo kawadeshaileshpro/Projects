@@ -20,6 +20,7 @@ Provide transparent & interpretable insights using SHAP
 Enable natural language explanations via LLMs + RAG
 
 **Data Sources**
+
 NSSO Household Loan Data (Unit-level records)
 
 Contains detailed information on households with one or multiple loans
@@ -47,7 +48,9 @@ Optional Additional Data
 District-level shapefiles / GeoJSON for loan default hotspot mapping
 
 ***Pipeline Steps***
+
 **1. Data Extraction & Loading**
+
 Downloaded SECC CSVs from government portals.
 
 Loaded NSSO Household Loan CSV.
@@ -55,6 +58,7 @@ Loaded NSSO Household Loan CSV.
 Ensured proper column naming & type consistency.
 
 **2. Data Cleaning**
+
 Removed duplicates & invalid records.
 
 Standardized district names across NSSO & SECC datasets.
@@ -64,6 +68,7 @@ Converted categorical codes (loan purpose, source of credit) into human-readable
 Handled missing values: median imputation for numerics, "Unknown" for categoricals.
 
 **3. Merging Datasets**
+
 Household-level (NSSO) joined with District-level (SECC) on "District Name".
 
 Strategy for multiple loans per household:
@@ -79,6 +84,7 @@ Most frequent loan purpose
 Preserved loan-level records for robustness checks.
 
 **4. Exploratory Data Analysis (EDA**)
+
 Loan Default Distribution (~24% default rate – balanced enough for ML).
 
 Financial Indicators: higher interest rates, shorter tenure, and large loan size → more defaults.
@@ -93,7 +99,14 @@ Secondary education in household → protective against default
 
 Geographic Hotspots: mapped district-wise default % to identify clusters in Bihar, UP, Odisha.
 
-**5. Feature Engineering**
+**5. Geographic Hotspot Mapping**
+
+District-wise loan default % visualized on India GeoJSON maps.
+
+Identified policy intervention zones (clusters in Eastern India).
+
+**6. Feature Engineering**
+
 Derived household-level aggregates (loan-to-income ratio, weighted average interest rate).
 
 Created socio-economic ratios (literacy %, land ownership %, deprivation index).
@@ -102,7 +115,8 @@ Encoded categorical features (loan purpose, caste, income source).
 
 Scaled numeric features (StandardScaler).
 
-**6. Model Building**
+**7. Model Building**
+
 Train-test split (70-30).
 
 Models tested:
@@ -115,7 +129,8 @@ XGBoost (best accuracy & explainability)
 
 Evaluation Metrics: AUC, Accuracy, Precision-Recall, F1-score.
 
-**7. Explainability**
+**8. Explainability**
+
 SHAP (SHapley Values):
 
 Identified top drivers of loan default:
@@ -136,12 +151,8 @@ Example:
 
 "This household has a high risk of default mainly because their income comes from casual labor and they lack land ownership, making repayment less stable."
 
-**8. Geographic Hotspot Mapping**
-District-wise loan default % visualized on India GeoJSON maps.
-
-Identified policy intervention zones (clusters in Eastern India).
-
 **9. RAG-based Interactive Query System (Future Work)**
+
 Developed a Retrieval-Augmented Generation (RAG) prototype.
 
 Allows credit officers to ask:
