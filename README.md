@@ -1,6 +1,6 @@
 
-Household Loan Default Prediction Using NSSO & SECC Data
-📖 Project Overview
+***Household Loan Default Prediction Using NSSO & SECC Data***
+**Project Overview**
 Loan defaults are a growing concern in India, particularly in rural and semi-urban areas where access to formal credit is limited. Traditional credit scoring often ignores socio-economic realities that strongly influence repayment behavior.
 
 This project integrates publicly available datasets:
@@ -17,7 +17,7 @@ Provide transparent & interpretable insights using SHAP
 
 Enable natural language explanations via LLMs + RAG
 
-📂 Data Sources
+**Data Sources**
 NSSO Household Loan Data (Unit-level records)
 
 Contains detailed information on households with one or multiple loans
@@ -42,27 +42,17 @@ Household summary statistics
 
 Optional Additional Data
 
-PMMY / Credit Bureau aggregates (for validation of results)
-
 District-level shapefiles / GeoJSON for loan default hotspot mapping
 
-⚙️ Pipeline Steps
-1. Data Extraction & Loading
+***Pipeline Steps***
+**1. Data Extraction & Loading**
 Downloaded SECC CSVs from government portals.
 
 Loaded NSSO Household Loan CSV.
 
 Ensured proper column naming & type consistency.
 
-python
-Copy
-Edit
-import pandas as pd
-hh_df = pd.read_csv("NSSO.csv")
-secc_assets = pd.read_csv("SECC_Asset_Ownership.csv")
-secc_education = pd.read_csv("SECC_Educational_Profile.csv")
-# ... repeat for all SECC datasets
-2. Data Cleaning
+**2. Data Cleaning**
 Removed duplicates & invalid records.
 
 Standardized district names across NSSO & SECC datasets.
@@ -71,7 +61,7 @@ Converted categorical codes (loan purpose, source of credit) into human-readable
 
 Handled missing values: median imputation for numerics, "Unknown" for categoricals.
 
-3. Merging Datasets
+**3. Merging Datasets**
 Household-level (NSSO) joined with District-level (SECC) on "District Name".
 
 Strategy for multiple loans per household:
@@ -86,7 +76,7 @@ Most frequent loan purpose
 
 Preserved loan-level records for robustness checks.
 
-4. Exploratory Data Analysis (EDA)
+**4. Exploratory Data Analysis (EDA**)
 Loan Default Distribution (~24% default rate – balanced enough for ML).
 
 Financial Indicators: higher interest rates, shorter tenure, and large loan size → more defaults.
@@ -101,7 +91,7 @@ Secondary education in household → protective against default
 
 Geographic Hotspots: mapped district-wise default % to identify clusters in Bihar, UP, Odisha.
 
-5. Feature Engineering
+**5. Feature Engineering**
 Derived household-level aggregates (loan-to-income ratio, weighted average interest rate).
 
 Created socio-economic ratios (literacy %, land ownership %, deprivation index).
@@ -110,7 +100,7 @@ Encoded categorical features (loan purpose, caste, income source).
 
 Scaled numeric features (StandardScaler).
 
-6. Model Building
+**6. Model Building**
 Train-test split (70-30).
 
 Models tested:
@@ -123,7 +113,7 @@ XGBoost (best accuracy & explainability)
 
 Evaluation Metrics: AUC, Accuracy, Precision-Recall, F1-score.
 
-7. Explainability
+**7. Explainability**
 SHAP (SHapley Values):
 
 Identified top drivers of loan default:
@@ -144,12 +134,12 @@ Example:
 
 "This household has a high risk of default mainly because their income comes from casual labor and they lack land ownership, making repayment less stable."
 
-8. Geographic Hotspot Mapping
+**8. Geographic Hotspot Mapping**
 District-wise loan default % visualized on India GeoJSON maps.
 
 Identified policy intervention zones (clusters in Eastern India).
 
-9. RAG-based Interactive Query System (Future Work)
+**9. RAG-based Interactive Query System (Future Work)**
 Developed a Retrieval-Augmented Generation (RAG) prototype.
 
 Allows credit officers to ask:
