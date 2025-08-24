@@ -1,4 +1,5 @@
-**Repository Strcuture**
+**Repository Structure**
+
   - **LoanDefault-NSSO-SECC/Data - Path for NSSO and SECC data downloaded in CSV format**
   - **LoanDefault-NSSO-SECC/Data_Preparation - Codebase for extracting and sanitizing the SECC Data from multiple datasets**
   - **LoanDefault-NSSO-SECC/Main - Main Pipeline Codebase for the end to end EDA, Feature Engineering, Model Build, Explinability and RAG**
