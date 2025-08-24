@@ -47,6 +47,13 @@ Optional Additional Data
 
 District-level shapefiles / GeoJSON for loan default hotspot mapping
 
+**Data Loading**
+
+NSSO Data extracted from the "Round77sch331Data.rar" downloaded from,
+Data Source Link :- https://microdata.gov.in/NADA/index.php/catalog/157/related-materials
+
+SECC Data is loaded using Data Loading Scripts present in the /
+
 ***Pipeline Steps***
 
 **1. Data Extraction & Loading**
