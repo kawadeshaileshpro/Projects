@@ -52,7 +52,9 @@ District-level shapefiles / GeoJSON for loan default hotspot mapping
 NSSO Data extracted from the "Round77sch331Data.rar" downloaded from,
 Data Source Link :- https://microdata.gov.in/NADA/index.php/catalog/157/related-materials
 
-SECC Data is loaded using Data Loading Scripts present in the /
+SECC Data is loaded using Data Loading Scripts present in the "LoanDefault-NSSO-SECC/Data_Preparation" folder.
+
+**for the ease of reference these datasets are converted into the CSV files in the 'LoanDefault-NSSO-SECC/Data' folder **
 
 ***Pipeline Steps***
 
