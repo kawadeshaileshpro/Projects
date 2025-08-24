@@ -7,43 +7,32 @@ Loan defaults are a growing concern in India, particularly in rural and semi-urb
 
 This project integrates publicly available datasets:
 
-NSSO Household Loan Data (loan-level household records)
+1) NSSO Household Loan Data (loan-level household records)
 
-SECC (Socio-Economic and Caste Census) District-Level Data (assets, deprivation, education, land, caste, etc.)
+2) SECC (Socio-Economic and Caste Census) District-Level Data (assets, deprivation, education, land, caste, etc.)
 
 We build a machine learning framework to:
-
-Predict household-level loan default risk
-
-Provide transparent & interpretable insights using SHAP
-
-Enable natural language explanations via LLMs + RAG
+  - Predict household-level loan default risk
+  - Provide transparent & interpretable insights using SHAP
+  - Enable natural language explanations via LLMs + RAG
 
 **Data Sources**
 
-NSSO Household Loan Data (Unit-level records)
+**NSSO Household Loan Data (Unit-level records)**
 
-Contains detailed information on households with one or multiple loans
+  Contains detailed information on households with one or multiple loans
+  Loan attributes: amount, tenure, interest rate, purpose, source of credit, repayment status
 
-Loan attributes: amount, tenure, interest rate, purpose, source of credit, repayment status
+**SECC Datasets (District-Level)**
 
-SECC Datasets (District-Level)
-
-Household asset ownership
-
-Land ownership
-
-Income profile & income sources
-
-Socio-economic deprivation indicators
-
-Caste & tribal composition
-
-Educational profile
-
-Household summary statistics
-
-Optional Additional Data
+  - Household asset ownership
+  - Land ownership
+  - Income profile & income sources
+  - Socio-economic deprivation indicators
+  - Caste & tribal composition
+  - Educational profile
+  - Household summary statistics
+  - Optional Additional Data
 
 District-level shapefiles / GeoJSON for loan default hotspot mapping
 
