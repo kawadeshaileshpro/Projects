@@ -6,6 +6,8 @@
 
 **Note :-** NSSO Data was extracted from "Round77sch331Data.rar" file (downloaded from the NSSO data link. This was then extracted into "Visit 1 Level 15 (Block 13) loans (cash and kind) payable as on the date of survey.sav" manually. Next steps of extracting data from this file have been detailed in the Main pipeline code mentioned above)
 
+
+
 ***Household Loan Default Prediction Using NSSO & SECC Data***
 
 **Project Overview**
