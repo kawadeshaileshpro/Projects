@@ -54,7 +54,19 @@ Data Source Link :- https://microdata.gov.in/NADA/index.php/catalog/157/related-
 
 SECC Data is loaded using Data Loading Scripts present in the "LoanDefault-NSSO-SECC/Data_Preparation" folder.
 
-**for the ease of reference these datasets are converted into the CSV files in the 'LoanDefault-NSSO-SECC/Data' folder **
+Here are links of different SECC datasets,
+•	SECC_All_Households_Summary_District_Level - https://secc.gov.in/getAllHhdSummaryStateReport.htm/ 
+•	SECC_Asset_Ownership_District_Level - https://secc.gov.in/getAssetsOwnershipRuralStateReport.htm/ 
+•	SECC_Caste_Tribal_Status_District_Level - https://secc.gov.in/getCasteProfileRuralStateReport.htm 
+•	SECC_Education_Profile_District_Level - https://secc.gov.in/getEducationProfileRuralStateReport.htm 
+•	SECC_Income_Profile_District_Level - https://secc.gov.in/getEmploymentAndIncomeRuralStateReport.htm 
+•	SECC_Land_Ownership_District_Level - https://secc.gov.in/getLandOwnershipRuralStateReport.htm 
+•	SECC_Socio_Economic_Depreviation_District_Level - https://secc.gov.in/getAllCategoryDeprivationStateReport.htm 
+•	SECC_Source_HouseHold_Income_District_Level - https://secc.gov.in/getMainSrcOfHhdIncomeRuralStateReport.htm 
+
+
+
+**for the ease of reference these datasets are converted into the CSV files in the'LoanDefault-NSSO-SECC/Data' folder**
 
 ***Pipeline Steps***
 
