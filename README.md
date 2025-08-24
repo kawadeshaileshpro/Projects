@@ -1,6 +1,8 @@
 
 ***Household Loan Default Prediction Using NSSO & SECC Data***
+
 **Project Overview**
+
 Loan defaults are a growing concern in India, particularly in rural and semi-urban areas where access to formal credit is limited. Traditional credit scoring often ignores socio-economic realities that strongly influence repayment behavior.
 
 This project integrates publicly available datasets:
