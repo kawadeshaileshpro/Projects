@@ -170,7 +170,7 @@ Example:
 
 "This household has a high risk of default mainly because their income comes from casual labor and they lack land ownership, making repayment less stable."
 
-**9. RAG-based Interactive Query System (Future Work)**
+**9. RAG-based Interactive Query System **
 
 Developed a Retrieval-Augmented Generation (RAG) prototype.
 
